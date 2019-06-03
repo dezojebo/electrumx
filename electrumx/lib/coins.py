@@ -338,6 +338,18 @@ class BitcoinMixin(object):
     XPRV_VERBYTES = bytes.fromhex("0488ade4")
     RPC_PORT = 8332
 
+class VergeCurrency(object):
+    SHORTNAME = "XVG"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("022d2533")
+    XPRV_VERBYTES = bytes.fromhex("0221312b")
+    P2PKH_VERBYTE = bytes.fromhex("30")
+    P2SH_VERBYTES = [bytes.fromhex("05")]
+    WIF_BYTE = bytes.fromhex("9E")
+    GENESIS_HASH = ('000000000019d6689c085ae165831e93'
+                    '4ff763ae46a2a6c172b3f1b60a8ce26f')
+    RPC_PORT = 20102
+    PEER_DEFAULT_PORTS = {'t': '52001', 's': '52002'}
 
 class HOdlcoin(Coin):
     NAME = "HOdlcoin"
