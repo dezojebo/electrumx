@@ -342,6 +342,9 @@ class VergeCurrency(Coin):
     NAME = "VergeCurrency"
     SHORTNAME = "XVG"
     NET = "mainnet"
+    TX_COUNT = 12722312
+    TX_COUNT_HEIGHT = 3180000
+    TX_PER_BLOCK = 4
     XPUB_VERBYTES = bytes.fromhex("022d2533")
     XPRV_VERBYTES = bytes.fromhex("0221312b")
     P2PKH_VERBYTE = bytes.fromhex("30")
