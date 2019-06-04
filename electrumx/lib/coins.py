@@ -355,6 +355,7 @@ class VergeCurrency(Coin):
     RPC_PORT = 20102
     PEER_DEFAULT_PORTS = {'t': '52001', 's': '52002'}
 
+
 class HOdlcoin(Coin):
     NAME = "HOdlcoin"
     SHORTNAME = "HODLC"
