@@ -338,7 +338,8 @@ class BitcoinMixin(object):
     XPRV_VERBYTES = bytes.fromhex("0488ade4")
     RPC_PORT = 8332
 
-class VergeCurrency(object):
+class VergeCurrency(Coin):
+    NAME = "VergeCurrency"
     SHORTNAME = "XVG"
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("022d2533")

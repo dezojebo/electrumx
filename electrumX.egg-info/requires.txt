@@ -1,5 +1,5 @@
 aiohttp>=3.3
-aiorpcX[ws]<0.19,>=0.18.1
+aiorpcX<0.19,>=0.18.1
 attrs
 plyvel
 pylru
@@ -27,6 +27,3 @@ x11-hash>=1.4
 
 [xevan-hash]
 xeven-hash
-
-[zny-yespower-0-5]
-zny-yespower-0-5
