@@ -338,7 +338,8 @@ class BitcoinMixin(object):
     XPRV_VERBYTES = bytes.fromhex("0488ade4")
     RPC_PORT = 8332
 
-class VergeCurrency(object):
+class Verge(Coin):
+    NAME = "Verge"
     SHORTNAME = "XVG"
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("022d2533")
@@ -346,10 +347,20 @@ class VergeCurrency(object):
     P2PKH_VERBYTE = bytes.fromhex("30")
     P2SH_VERBYTES = [bytes.fromhex("05")]
     WIF_BYTE = bytes.fromhex("9E")
-    GENESIS_HASH = ('000000000019d6689c085ae165831e93'
-                    '4ff763ae46a2a6c172b3f1b60a8ce26f')
+    GENESIS_HASH = ('00000fc63692467faeb20cdb3b53200d'
+                    'c601d75bdfa1001463304cc790d77278')
     RPC_PORT = 20102
     PEER_DEFAULT_PORTS = {'t': '52001', 's': '52002'}
+    TX_COUNT = 500000
+    TX_COUNT_HEIGHT = 3082138
+    TX_PER_BLOCK = 1
+    DESERIALIZER = lib_tx.DeserializerVerge
+
+    @classmethod
+    def header_hash(cls, header):
+        '''Given a header return the hash.'''
+        import scrypt
+        return scrypt.hash(header, header, 1024, 1, 1, 32)
 
 class HOdlcoin(Coin):
     NAME = "HOdlcoin"
