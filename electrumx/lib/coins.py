@@ -345,12 +345,11 @@ class Verge(Coin):
     XPUB_VERBYTES = bytes.fromhex("022d2533")
     XPRV_VERBYTES = bytes.fromhex("0221312b")
     P2PKH_VERBYTE = bytes.fromhex("30")
-    P2SH_VERBYTES = [bytes.fromhex("05")]
+    P2SH_VERBYTES = [bytes.fromhex("33")]
     WIF_BYTE = bytes.fromhex("9E")
     GENESIS_HASH = ('00000fc63692467faeb20cdb3b53200d'
                     'c601d75bdfa1001463304cc790d77278')
     RPC_PORT = 20102
-    PEER_DEFAULT_PORTS = {'t': '52001', 's': '52002'}
     TX_COUNT = 500000
     TX_COUNT_HEIGHT = 3082138
     TX_PER_BLOCK = 1
