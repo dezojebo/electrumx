@@ -11,3 +11,10 @@ docs/_build
 /electrumx.egg-info
 .vscode/
 .idea/
+bin/
+database/
+include/
+lib/
+share/
+.Python
+db-data/
